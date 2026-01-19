@@ -31,14 +31,14 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.use((req, res, next) => {
-    req.logowanko = db;
-    next();
-})
+// app.use((req, res, next) => {
+//     req.logowanko = db;
+//     next();
+// })
 
 app.use(async (req, res, next) => {
     try {
-        await req.logowanko.collection('accessLogs').insertOne({
+        await db.collection('accessLogs').insertOne({
             method: req.method,
             url: req.originalUrl,
             headers: req.headers,
@@ -56,7 +56,7 @@ app.use('/komentarz', komentarzRouter);
 
 app.use(async (err: any, req: Request, res: Response, next: NextFunction) => {
     try {
-        await req.logowanko.collection('errorLogs').insertOne({
+        await db.collection('errorLogs').insertOne({
             method: req.method,
             url: req.originalUrl,
             message: err.message,
