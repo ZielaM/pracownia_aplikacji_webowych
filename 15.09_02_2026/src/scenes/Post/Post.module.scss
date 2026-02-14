@@ -1,0 +1,37 @@
+.Posts {
+  width: 80%;
+  max-width: 140rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Error, &Loading {
+    font-size: 3rem;
+    color: #ff69b4;
+    text-align: center;
+  }
+
+  &Post {
+    border: 0.1rem solid #ff69b4;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &Title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #ff69b4;
+      margin: 1.5rem auto;
+    }
+
+    &Body {
+      font-size: 1.6rem;
+      margin: 2rem;
+      text-align: justify;
+    }
+
+  }
+}
