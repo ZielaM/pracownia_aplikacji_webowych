@@ -1,0 +1,121 @@
+.Posts {
+  width: 80%;
+  max-width: 140rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Error,
+  &Loading {
+    font-size: 3rem;
+    color: #ff69b4;
+    text-align: center;
+  }
+
+  &Post {
+    border: 0.1rem solid #ff69b4;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &Title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #ff69b4;
+      margin: 1.5rem auto;
+    }
+
+    &Body {
+      font-size: 1.6rem;
+      margin: 2rem;
+      text-align: justify;
+    }
+  }
+
+  &Comments {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ff69b4;
+    width: 100%;
+
+    &Title {
+      font-size: 2rem;
+      color: #ff69b4;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    &Form {
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &Textarea {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      min-height: 80px;
+      resize: vertical;
+      font-family: inherit;
+      font-size: 1.6rem;
+
+      &:focus {
+        outline: none;
+        border-color: #ff69b4;
+      }
+    }
+
+    &Button {
+      padding: 0.8rem 1.5rem;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      align-self: flex-start;
+      font-weight: bold;
+      font-size: 1.6rem;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover:not(:disabled) {
+        opacity: 0.8;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    &Error {
+      color: red;
+      font-size: 1.6rem;
+    }
+
+    &List {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &Item {
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      background-color: #fce4ec;
+      border-left: 4px solid #ff69b4;
+      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+
+      p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: #333;
+        margin: 0;
+      }
+    }
+  }
+}
